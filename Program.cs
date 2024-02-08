@@ -14,7 +14,7 @@
 
             for (int i = 0; i<100 ; i++)
             {
-                Console.WriteLine("1) Inserimento completo nominativo");
+                Console.WriteLine("\n1) Inserimento completo nominativo");
                 Console.WriteLine("2) Elenco dei nominativi inseriti");
                 Console.WriteLine("3) Ricerca del nominativo in base al nickname");
                 Console.WriteLine("9) Esci");
@@ -27,7 +27,7 @@
                 switch (scelta)
                 {
                     case 1:
-                        Console.WriteLine("inserimento nominativo completo:");
+                        Console.WriteLine("\ninserimento nominativo completo:");
                         Console.WriteLine("inserisci il tuo nome (obbligatorio):");
                         nome[i] = Console.ReadLine();
                         Console.WriteLine("inserisci il tuo cognome (obbligatorio):");
@@ -42,7 +42,20 @@
                         simpatia[i] = int.Parse(Console.ReadLine());
                         break;
 
-                    
+                    case 2:
+                        Console.WriteLine("\nelenco di tutti i nominativi inseriti:\n");
+                        
+                        for(int j=0; j<i ; j++)
+                        {
+                            Console.WriteLine($"nome: {nome[j]}");
+                            Console.WriteLine($"cognome: {cognome[j]}");
+                            Console.WriteLine($"email: {email[j]}");
+                            Console.WriteLine($"nickname: {nickname[j]}");
+                            Console.WriteLine($"eta: {eta[j]}");
+                            Console.WriteLine($"simpatia: {simpatia[j]}\n");
+                        } 
+                        break;
+                        
                 }
             }
 
