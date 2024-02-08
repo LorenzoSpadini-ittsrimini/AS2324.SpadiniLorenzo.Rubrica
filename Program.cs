@@ -55,15 +55,28 @@
                             Console.WriteLine($"simpatia: {simpatia[j]}\n");
                         } 
                         break;
-                        
+
+                     case 3:
+                        Console.WriteLine("\nricerca nominativo in base la nickname:");
+                        Console.WriteLine("\ninserisci il nickname:");
+                        string ricercaNickname = Console.ReadLine();
+                        for(int t=0; t<i; t++ ) 
+                        {
+                            if (ricercaNickname == nickname[t])
+                            {
+                                Console.WriteLine($"\nnome: {nome[t]}");
+                                Console.WriteLine($"cognome: {cognome[t]}");
+                                Console.WriteLine($"email: {email[t]}");
+                                Console.WriteLine($"nickname: {nickname[t]}");
+                                Console.WriteLine($"eta: {eta[t]}");
+                                Console.WriteLine($"simpatia: {simpatia[t]}\n");
+                            }
+
+                        }
+                        break;
                 }
             }
-
-
         }
-
-
-
     }
 }
 
