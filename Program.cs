@@ -121,7 +121,19 @@ namespace AS2324.SpadiniLorenzo.Rubrica
                         Console.WriteLine("Ricerca di tutti i cognomi che iniziano con 'a' (case insensitive):");
                         for (int t = 0; t < i; t++)
                         {
-                            if (cognome[t] != null && cognome[t].ToUpper().StartsWith("A"))
+                            if (cognome[t].ToUpper().StartsWith("A"))
+                            {
+                                Console.WriteLine($"Cognome: {cognome[t]}");
+                            }
+                        }
+                        break;
+
+                    case 6:
+                        Console.WriteLine("Inserisci parte del cognome che vuoi cercare (case insensitive):");
+                        string parteCognome = Console.ReadLine();
+                        for (int t = 0; t < i; t++)
+                        {
+                            if (cognome[t].ToUpper().Contains(parteCognome.ToUpper()))
                             {
                                 Console.WriteLine($"Cognome: {cognome[t]}");
                             }
