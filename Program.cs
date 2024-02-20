@@ -117,6 +117,16 @@ namespace AS2324.SpadiniLorenzo.Rubrica
                         if (!trovato) Console.WriteLine("Nome non trovato.");
                         break;
 
+                    case 5:
+                        Console.WriteLine("Ricerca di tutti i cognomi che iniziano con 'a' (case insensitive):");
+                        for (int t = 0; t < i; t++)
+                        {
+                            if (cognome[t] != null && cognome[t].ToUpper().StartsWith("A"))
+                            {
+                                Console.WriteLine($"Cognome: {cognome[t]}");
+                            }
+                        }
+                        break;
                 }
             }
         }
